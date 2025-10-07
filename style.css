@@ -1,0 +1,71 @@
+:root{
+  --bg:#0a1630; --card:#132347; --muted:#b0b8d1; --accent:#00ff99; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',system-ui,Arial;}
+body{background:linear-gradient(180deg,var(--bg),#061427);color:var(--white);-webkit-font-smoothing:antialiased;}
+.hidden{display:none!important;}
+.primary-btn, button{background:var(--accent);color:#05221a;padding:12px 18px;border-radius:8px;border:0;font-weight:700;cursor:pointer;text-decoration:none}
+.primary-btn:hover, button:hover{opacity:.9}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:120px} /* fixed: bigger homepage logo */
+nav a{color:var(--muted);margin-left:22px;text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--accent)}
+main{padding-bottom:40px}
+
+/* hero */
+.hero{display:flex;justify-content:space-between;align-items:center;padding:80px 40px 20px 40px;gap:24px}
+.hero-text{max-width:600px}
+.hero-text h1{font-size:2.4rem;margin:0 0 10px 0}
+.hero-text p{color:#9fb4c8;margin:0 0 20px 0}
+
+/* candles */
+.candles{display:flex;gap:10px;align-items:flex-end;height:120px;padding-right:20px}
+.candle{width:14px;border-radius:3px;box-shadow:0 6px 18px rgba(2,10,20,0.6);transform-origin:bottom center;animation:flicker 1.2s infinite alternate ease-in-out}
+.candle.red{background:#ff5b5b;height:82px;animation-delay:0.2s}
+.candle.green{background:#2af59a;height:110px;animation-delay:0.4s}
+@keyframes flicker{from{transform:scaleY(.7);opacity:.85}to{transform:scaleY(1.18);opacity:1}}
+
+/* trader/verification boxes */
+#trader-id-section,#verification-section{
+  margin:18px 40px;padding:18px;border-radius:10px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.02)
+}
+#trader-id-section input{width:320px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);margin-right:10px}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:999}
+.modal-content{background:var(--card);padding:24px;border-radius:12px;width:92%;max-width:420px;text-align:center;border:1px solid rgba(255,255,255,0.03)}
+.modal p{color:var(--muted)}
+
+/* reviews */
+.reviews{margin:30px 40px;padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.02)}
+.review-cards{display:flex;gap:14px;flex-wrap:wrap}
+.review{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;min-width:220px;max-width:320px;border:1px solid rgba(255,255,255,0.02)}
+.r-top{display:flex;justify-content:space-between;align-items:center}
+.stars{color:gold;font-weight:700}
+.r-text{color:var(--muted);margin:8px 0}
+.r-meta{font-size:12px;color:#89a2bd}
+.trustline{margin-top:12px;color:var(--muted);font-size:13px}
+.trustline span{color:var(--accent);font-weight:700}
+
+/* bot page */
+#bot-page{padding:30px;text-align:center}
+#bot-page header img{width:300px;margin-bottom:8px;border-radius:10px}
+#bot-page h1{color:#ffae00;margin:10px 0;font-size:1.6rem}
+.signal-box{background:rgba(255,255,255,0.05);border-radius:15px;padding:25px;margin:20px auto;max-width:700px;box-shadow:0 0 20px rgba(255,170,0,0.12)}
+.signal-box h2{color:#ffae00;margin-bottom:15px}
+select,button#getSignal{padding:10px;margin:8px;border-radius:8px;border:none;font-size:1rem}
+select{background:#1c1f2b;color:white}
+button#getSignal{background:linear-gradient(45deg,#ffae00,#ff7a00);color:#fff;cursor:pointer;font-weight:bold}
+#signalResult{margin-top:10px;font-size:1.2rem;font-weight:700}
+#timerDisplay{color:#00ff90;font-weight:600}
+
+/* responsive */
+@media (max-width:880px){
+  .hero{flex-direction:column;align-items:flex-start;padding:40px}
+  .candles{order:2;margin-top:18px}
+  #trader-id-section input{width:100%;margin-bottom:10px}
+  .review-cards{flex-direction:column}
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- HOMEPAGE -->
+<div id="homepage">
+  <header>
+    <div class="logo">
+      <!-- big logo (no Nectar text) -->
+      <img src="https://i.imghippo.com/files/faei4276yw.png" alt="Nectar Logo" />
+    </div>
+    <nav>
+      <a href="#" id="how-it-works">How it works</a>
+      <a href="#" id="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Unlock Profit Potential with 1-Min Signals</h1>
+        <p>Ultra-fast alerts • High accuracy • Automated strategies</p>
+        <button id="join-now">Join Now</button>
+      </div>
+      <div class="candles">
+        <div class="candle red"></div>
+        <div class="candle green"></div>
+        <div class="candle red"></div>
+        <div class="candle green"></div>
+      </div>
+    </section>
+
+    <!-- Trader ID -->
+    <div id="trader-id-section" class="hidden">
+      <h2>Submit Your Trader ID</h2>
+      <input type="text" id="trader-id" placeholder="Enter your Trader ID" />
+      <button id="submit-id">Submit</button>
+    </div>
+
+    <!-- Verification -->
+    <div id="verification-section" class="hidden">
+      <h2>Please wait while we verify your account...</h2>
+      <p>Verification will complete in <span id="countdown">15:00</span></p>
+    </div>
+
+    <!-- REVIEWS (homepage) -->
+    <section class="reviews">
+      <h3>What Traders Are Saying</h3>
+      <div class="review-cards">
+        <div class="review">
+          <div class="r-top">
+            <strong>Ahmad R.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="r-text">“Signals are fast and accurate. Made trading simpler — earned first week profits. Highly recommend Nectar!”</p>
+          <div class="r-meta">Verified buyer • 2 days ago</div>
+        </div>
+
+        <div class="review">
+          <div class="r-top">
+            <strong>Sana K.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="r-text">“Easy setup, instant alerts. Support helped me add my Trader ID and within minutes bot access was granted.”</p>
+          <div class="r-meta">Verified buyer • 5 days ago</div>
+        </div>
+
+        <div class="review">
+          <div class="r-top">
+            <strong>Bilal M.</strong>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <p class="r-text">“Great signals and clear UI. Countdown verification worked smoothly. Results are promising.”</p>
+          <div class="r-meta">Verified buyer • 1 week ago</div>
+        </div>
+
+        <div class="review">
+          <div class="r-top">
+            <strong>Maryam S.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="r-text">“Love the 1-min signals. Bot access was instant after verification — very impressed with Nectar.”</p>
+          <div class="r-meta">Verified buyer • 10 days ago</div>
+        </div>
+      </div>
+      <div class="trustline">Based on reviews from 4,321 users • <span>Trusted</span></div>
+    </section>
+  </main>
+</div>
+
+<!-- CREATE ACCOUNT MODAL (referral) -->
+<div id="create-account-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Create Account to Access</h2>
+    <p>Register on our partner platform to unlock the Nectar trading bot.</p>
+    <!-- referral link (opens in new tab) -->
+    <a id="create-account-btn" class="primary-btn" href="https://broker-qx.pro/sign-up/?lid=1192906" target="_blank" rel="noopener">Create Account Now</a>
+    <button id="close-modal" class="primary-btn" style="background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.06);margin-left:10px;">Back</button>
+  </div>
+</div>
+
+<!-- BOT PAGE (hidden until verification complete) -->
+<div id="bot-page" class="hidden">
+  <header>
+    <img src="https://i.imghippo.com/files/QD8163uso.png" alt="Logo" />
+    <h1>NECTAR SIGNALS</h1>
+    <p>Live Forex Feed • Smart AI Signals</p>
+  </header>
+
+  <section class="signal-box">
+    <h2>Instant Signal Generator</h2>
+    <label>Asset:</label>
+    <select id="asset">
+      <option value="">Select Currency Pair</option>
+      <option>EUR/USD</option><option>GBP/USD</option><option>USD/JPY</option>
+      <option>USD/CAD</option><option>USD/CHF</option><option>AUD/USD</option>
+      <option>NZD/USD</option><option>EUR/JPY</option><option>GBP/JPY</option><option>USD/MXN</option>
+    </select>
+    <label>Timer:</label>
+    <select id="timer"><option value="30">30 Seconds</option><option value="60">1 Minute</option></select>
+    <button id="getSignal">GET SIGNAL</button>
+    <p id="signalResult"></p><p id="timerDisplay"></p>
+  </section>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
